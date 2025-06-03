@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donghua List - DongPlay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-blue-600">DongPlay</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="/" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="/donghua.html" class="text-gray-700 hover:text-blue-600">Donghua</a>
+                    <a href="/bookmark.html" class="text-gray-700 hover:text-blue-600">Bookmark</a>
+                    <a href="/schedule.html" class="text-gray-700 hover:text-blue-600">Schedule</a>
+                    <a href="/random" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Surprise Me!</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        <!-- Search and Filter Section -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <!-- Search Bar -->
+                <div class="flex-1">
+                    <div class="relative">
+                        <input type="text" id="search-input" 
+                            placeholder="Search donghua..." 
+                            class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                        <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="flex flex-wrap gap-4">
+                    <!-- Genre Filter -->
+                    <select id="genre-filter" class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                        <option value="">All Genres</option>
+                        <option value="action">Action</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="martial-arts">Martial Arts</option>
+                    </select>
+
+                    <!-- Status Filter -->
+                    <select id="status-filter" class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                        <option value="">All Status</option>
+                        <option value="ongoing">Ongoing</option>
+                        <option value="completed">Completed</option>
+                    </select>
+
+                    <!-- Sort By -->
+                    <select id="sort-by" class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                        <option value="latest">Latest Update</option>
+                        <option value="rating">Rating</option>
+                        <option value="title">Title A-Z</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Donghua Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6" id="donghua-grid">
+            <!-- Donghua Card Template -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div class="relative">
+                    <img src="https://via.placeholder.com/300x400" alt="Donghua Title" class="w-full h-64 object-cover">
+                    <div class="absolute top-2 right-2 bg-blue-600 text-white px-2 py-1 rounded text-sm">
+                        Ongoing
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2">Battle Through the Heavens</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <span class="text-gray-700">9.2</span>
+                        </div>
+                        <span class="mx-2 text-gray-400">•</span>
+                        <span class="text-gray-600">Episodes: 149</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-sm">Action</span>
+                        <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-sm">Fantasy</span>
+                    </div>
+                    <a href="/watch.html?series=battle-through-the-heavens" 
+                        class="block text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        Watch Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- More donghua cards will be dynamically added here -->
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-8 flex justify-center">
+            <nav class="inline-flex rounded-lg shadow">
+                <button class="px-3 py-2 rounded-l-lg bg-white border border-gray-300 text-gray-700 hover:bg-gray-50">
+                    Previous
+                </button>
+                <button class="px-3 py-2 bg-blue-600 text-white border border-blue-600">
+                    1
+                </button>
+                <button class="px-3 py-2 bg-white border border-gray-300 text-gray-700 hover:bg-gray-50">
+                    2
+                </button>
+                <button class="px-3 py-2 bg-white border border-gray-300 text-gray-700 hover:bg-gray-50">
+                    3
+                </button>
+                <button class="px-3 py-2 rounded-r-lg bg-white border border-gray-300 text-gray-700 hover:bg-gray-50">
+                    Next
+                </button>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">DongPlay</h3>
+                    <p class="text-gray-400">Your go-to source for Donghua series with Indonesian subtitles.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="/donghua.html" class="text-gray-400 hover:text-white">Donghua</a></li>
+                        <li><a href="/bookmark.html" class="text-gray-400 hover:text-white">Bookmark</a></li>
+                        <li><a href="/schedule.html" class="text-gray-400 hover:text-white">Schedule</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <p class="text-gray-400">Email: admin@dongplay.com</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 DongPlay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Handle search input
+        const searchInput = document.getElementById('search-input');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            filterDonghua();
+        });
+
+        // Handle filter changes
+        ['genre-filter', 'status-filter', 'sort-by'].forEach(id => {
+            document.getElementById(id).addEventListener('change', filterDonghua);
+        });
+
+        function filterDonghua() {
+            // In a real implementation, this would filter the donghua cards based on the search term and filters
+            console.log('Filtering donghua...');
+        }
+    </script>
+</body>
+</html>

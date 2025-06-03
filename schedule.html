@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Release Schedule - DongPlay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-blue-600">DongPlay</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="/" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="/donghua.html" class="text-gray-700 hover:text-blue-600">Donghua</a>
+                    <a href="/bookmark.html" class="text-gray-700 hover:text-blue-600">Bookmark</a>
+                    <a href="/schedule.html" class="text-gray-700 hover:text-blue-600">Schedule</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-2xl font-bold">Release Schedule</h1>
+            <div class="flex items-center space-x-4">
+                <!-- Calendar View Toggle -->
+                <div class="flex space-x-2 bg-gray-200 rounded-lg p-1">
+                    <button class="px-4 py-2 rounded-lg bg-white text-blue-600 shadow">Weekly</button>
+                    <button class="px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100">Monthly</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Schedule Calendar -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <!-- Week Navigation -->
+            <div class="flex items-center justify-between p-4 border-b">
+                <button class="text-gray-600 hover:text-blue-600">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <h2 class="text-lg font-semibold">March 11 - March 17, 2024</h2>
+                <button class="text-gray-600 hover:text-blue-600">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Weekly Schedule Grid -->
+            <div class="grid grid-cols-7 gap-px bg-gray-200">
+                <!-- Day Header -->
+                <div class="bg-gray-50 p-4">
+                    <h3 class="text-sm font-semibold text-gray-600">Monday</h3>
+                    <p class="text-xs text-gray-500">Mar 11</p>
+                </div>
+                <!-- Repeat for other days -->
+                <div class="bg-gray-50 p-4">
+                    <h3 class="text-sm font-semibold text-gray-600">Tuesday</h3>
+                    <p class="text-xs text-gray-500">Mar 12</p>
+                </div>
+                <div class="bg-gray-50 p-4">
+                    <h3 class="text-sm font-semibold text-gray-600">Wednesday</h3>
+                    <p class="text-xs text-gray-500">Mar 13</p>
+                </div>
+                <div class="bg-gray-50 p-4">
+                    <h3 class="text-sm font-semibold text-gray-600">Thursday</h3>
+                    <p class="text-xs text-gray-500">Mar 14</p>
+                </div>
+                <div class="bg-gray-50 p-4">
+                    <h3 class="text-sm font-semibold text-gray-600">Friday</h3>
+                    <p class="text-xs text-gray-500">Mar 15</p>
+                </div>
+                <div class="bg-gray-50 p-4">
+                    <h3 class="text-sm font-semibold text-gray-600">Saturday</h3>
+                    <p class="text-xs text-gray-500">Mar 16</p>
+                </div>
+                <div class="bg-gray-50 p-4">
+                    <h3 class="text-sm font-semibold text-gray-600">Sunday</h3>
+                    <p class="text-xs text-gray-500">Mar 17</p>
+                </div>
+
+                <!-- Schedule Content -->
+                <div class="bg-white p-4 min-h-[200px]">
+                    <div class="bg-blue-50 rounded p-2 mb-2">
+                        <h4 class="font-semibold text-sm">Battle Through the Heavens</h4>
+                        <p class="text-xs text-gray-600">Episode 150</p>
+                        <p class="text-xs text-blue-600">10:00 AM</p>
+                    </div>
+                </div>
+                <!-- Repeat for other days -->
+                <div class="bg-white p-4 min-h-[200px]"></div>
+                <div class="bg-white p-4 min-h-[200px]">
+                    <div class="bg-blue-50 rounded p-2 mb-2">
+                        <h4 class="font-semibold text-sm">Stellar Transformation</h4>
+                        <p class="text-xs text-gray-600">Episode 15</p>
+                        <p class="text-xs text-blue-600">2:00 PM</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 min-h-[200px]"></div>
+                <div class="bg-white p-4 min-h-[200px]">
+                    <div class="bg-blue-50 rounded p-2 mb-2">
+                        <h4 class="font-semibold text-sm">Perfect World</h4>
+                        <p class="text-xs text-gray-600">Episode 218</p>
+                        <p class="text-xs text-blue-600">3:00 PM</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 min-h-[200px]"></div>
+                <div class="bg-white p-4 min-h-[200px]">
+                    <div class="bg-blue-50 rounded p-2 mb-2">
+                        <h4 class="font-semibold text-sm">Soul Land 2</h4>
+                        <p class="text-xs text-gray-600">Episode 104</p>
+                        <p class="text-xs text-blue-600">1:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upcoming Releases -->
+        <div class="mt-8">
+            <h2 class="text-xl font-bold mb-4">Upcoming Releases</h2>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Series</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Episode</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Release Date</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <img src="https://via.placeholder.com/40" alt="" class="w-10 h-10 rounded-lg mr-3">
+                                        <div>
+                                            <div class="text-sm font-medium text-gray-900">Battle Through the Heavens</div>
+                                            <div class="text-sm text-gray-500">Season 5</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">Episode 150</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">Mar 11, 2024</div>
+                                    <div class="text-sm text-gray-500">10:00 AM</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                        On Schedule
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                    <button class="text-blue-600 hover:text-blue-900">Set Reminder</button>
+                                </td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">DongPlay</h3>
+                    <p class="text-gray-400">Your go-to source for Donghua series with Indonesian subtitles.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="/donghua.html" class="text-gray-400 hover:text-white">Donghua</a></li>
+                        <li><a href="/bookmark.html" class="text-gray-400 hover:text-white">Bookmark</a></li>
+                        <li><a href="/schedule.html" class="text-gray-400 hover:text-white">Schedule</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <p class="text-gray-400">Email: admin@dongplay.com</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 DongPlay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Handle calendar view toggle
+        const viewButtons = document.querySelectorAll('.bg-gray-200 button');
+        viewButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                viewButtons.forEach(btn => {
+                    btn.classList.remove('bg-white', 'text-blue-600', 'shadow');
+                    btn.classList.add('text-gray-600');
+                });
+                button.classList.remove('text-gray-600');
+                button.classList.add('bg-white', 'text-blue-600', 'shadow');
+            });
+        });
+
+        // Handle reminder setting
+        document.querySelectorAll('button.text-blue-600').forEach(button => {
+            button.addEventListener('click', () => {
+                const currentText = button.textContent;
+                if (currentText === 'Set Reminder') {
+                    button.textContent = 'Remove Reminder';
+                    showNotification('Reminder set successfully!');
+                } else {
+                    button.textContent = 'Set Reminder';
+                    showNotification('Reminder removed');
+                }
+            });
+        });
+
+        // Show notification
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'fixed bottom-4 right-4 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            setTimeout(() => notification.remove(), 3000);
+        }
+    </script>
+</body>
+</html>

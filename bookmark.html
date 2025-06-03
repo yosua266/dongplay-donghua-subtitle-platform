@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookmarks - DongPlay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-blue-600">DongPlay</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="/" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="/donghua.html" class="text-gray-700 hover:text-blue-600">Donghua</a>
+                    <a href="/bookmark.html" class="text-gray-700 hover:text-blue-600">Bookmark</a>
+                    <a href="/schedule.html" class="text-gray-700 hover:text-blue-600">Schedule</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-2xl font-bold">My Bookmarks</h1>
+            <div class="flex items-center space-x-4">
+                <!-- Sort Options -->
+                <select id="sort-bookmarks" class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                    <option value="recent">Recently Added</option>
+                    <option value="title">Title A-Z</option>
+                    <option value="series">By Series</option>
+                </select>
+
+                <!-- View Toggle -->
+                <div class="flex space-x-2">
+                    <button id="grid-view" class="p-2 text-blue-600 hover:bg-gray-100 rounded-lg">
+                        <i class="fas fa-th-large"></i>
+                    </button>
+                    <button id="list-view" class="p-2 text-gray-400 hover:bg-gray-100 rounded-lg">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bookmarked Videos Grid View -->
+        <div id="bookmarks-grid" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Bookmark Card Template -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div class="relative">
+                    <img src="https://via.placeholder.com/300x400" alt="Video Thumbnail" class="w-full h-48 object-cover">
+                    <button class="absolute top-2 right-2 text-red-500 hover:text-red-600 bg-white rounded-full p-2 shadow-md">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2">Battle Through the Heavens - Episode 149</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-gray-600 text-sm">Series: Battle Through the Heavens</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-gray-500 text-sm">Added: 2024-03-15</span>
+                        <a href="/watch.html" class="text-blue-600 hover:text-blue-700">
+                            Watch Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- More bookmark cards will be dynamically added here -->
+        </div>
+
+        <!-- Bookmarked Videos List View (Hidden by default) -->
+        <div id="bookmarks-list" class="hidden space-y-4">
+            <!-- Bookmark List Item Template -->
+            <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <img src="https://via.placeholder.com/150x100" alt="Video Thumbnail" class="w-24 h-16 object-cover rounded">
+                    <div>
+                        <h3 class="font-semibold">Battle Through the Heavens - Episode 149</h3>
+                        <p class="text-gray-600 text-sm">Series: Battle Through the Heavens</p>
+                        <span class="text-gray-500 text-sm">Added: 2024-03-15</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/watch.html" class="text-blue-600 hover:text-blue-700">
+                        Watch Now
+                    </a>
+                    <button class="text-red-500 hover:text-red-600">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- More bookmark list items will be dynamically added here -->
+        </div>
+
+        <!-- Empty State (Shown when no bookmarks) -->
+        <div id="empty-state" class="hidden text-center py-16">
+            <i class="far fa-bookmark text-gray-400 text-5xl mb-4"></i>
+            <h2 class="text-xl font-semibold text-gray-600 mb-2">No Bookmarks Yet</h2>
+            <p class="text-gray-500 mb-4">Start adding your favorite videos to your bookmarks!</p>
+            <a href="/donghua.html" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+                Browse Donghua
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">DongPlay</h3>
+                    <p class="text-gray-400">Your go-to source for Donghua series with Indonesian subtitles.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="/donghua.html" class="text-gray-400 hover:text-white">Donghua</a></li>
+                        <li><a href="/bookmark.html" class="text-gray-400 hover:text-white">Bookmark</a></li>
+                        <li><a href="/schedule.html" class="text-gray-400 hover:text-white">Schedule</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <p class="text-gray-400">Email: admin@dongplay.com</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 DongPlay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // View toggle functionality
+        const gridView = document.getElementById('grid-view');
+        const listView = document.getElementById('list-view');
+        const bookmarksGrid = document.getElementById('bookmarks-grid');
+        const bookmarksList = document.getElementById('bookmarks-list');
+
+        gridView.addEventListener('click', () => {
+            gridView.classList.replace('text-gray-400', 'text-blue-600');
+            listView.classList.replace('text-blue-600', 'text-gray-400');
+            bookmarksGrid.classList.remove('hidden');
+            bookmarksList.classList.add('hidden');
+        });
+
+        listView.addEventListener('click', () => {
+            listView.classList.replace('text-gray-400', 'text-blue-600');
+            gridView.classList.replace('text-blue-600', 'text-gray-400');
+            bookmarksList.classList.remove('hidden');
+            bookmarksGrid.classList.add('hidden');
+        });
+
+        // Sort functionality
+        document.getElementById('sort-bookmarks').addEventListener('change', (e) => {
+            // In a real implementation, this would sort the bookmarks based on the selected option
+            console.log('Sorting bookmarks by:', e.target.value);
+        });
+
+        // Delete bookmark functionality
+        document.querySelectorAll('.fa-trash').forEach(deleteBtn => {
+            deleteBtn.addEventListener('click', (e) => {
+                if (confirm('Are you sure you want to remove this bookmark?')) {
+                    // In a real implementation, this would remove the bookmark
+                    const card = e.target.closest('.bg-white');
+                    card.remove();
+
+                    // Check if there are any bookmarks left
+                    if (bookmarksGrid.children.length === 0) {
+                        document.getElementById('empty-state').classList.remove('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
